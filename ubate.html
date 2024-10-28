@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubaté - Todo en una Página</title>
+</head>
+    <style>
+body {
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Cambiado a Comic Sans MS */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #e9f7fa; /* Fondo azul pastel */
+            color: #333;
+        }
+
+       header {
+            position: relative; /* Necesario para posicionar el título */
+            overflow: hidden; /* Para ocultar el desbordamiento */
+            border-bottom: 5px solid #ff8bbd; /* Rosa más oscuro */
+            border-radius: 15px; /* Bordes redondeados en el encabezado */
+        }
+
+        header img {
+            width: 100%; /* Hace que la imagen ocupe todo el ancho */
+            border-radius: 15px; /* Bordes redondeados de la imagen */
+        }
+
+        header h1 {
+            position: absolute; /* Para superponer el título sobre la imagen */
+            top: 30%; /* Ajusta según sea necesario */
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centra el título */
+            z-index: 2; /* Asegura que el título esté encima de la imagen */
+            color: #fff;
+            font-size: 3em; /* Tamaño de fuente más grande */
+            margin: 0;
+            animation: slideIn 1s ease-in-out; /* Animación de entrada */
+        }
+
+nav {
+            background-color: #aeeeee; /* Fondo azul pastel para el menú */
+            position: fixed; /* Fija el menú en la parte superior */
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 3; /* Asegura que el menú esté encima de otros elementos */
+            padding: 10px 0; /* Espaciado del menú */
+        }
+
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ff99cc;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            border-bottom: 2px solid  #ff1493; /* Rosa más oscuro */
+            color:#ff1493; /* Cambio de color en hover */
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px auto;
+            border-radius: 8px;
+            background-color: #ffffff; /* Fondo blanco */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            animation: fadeIn 0.5s ease-in-out; /* Animación de entrada */
+        }
+
+        h2 {
+            color: #66b3ff; /* Azul pastel */
+            border-bottom: 2px solid #99ccff; /* Azul claro */
+            padding-bottom: 5px;
+            font-size: 2em; /* Tamaño de fuente más grande */
+            text-transform: uppercase; /* Texto en mayúsculas */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background: #ffb3e6; /* Rosa pastel */
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+        }
+
+        /* Animaciones */
+       @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                top: 0; /* Comienza desde la parte superior */
+            }
+            to {
+                opacity: 1;
+                top: 30%; /* Termina en la posición deseada */
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+           
+            }
+    </style>
+<body>
+    <header>
+        <img src="IMG/ubate.jpg"/>
+        <h1>Ubaté</h1>
+        <nav>
+            <ul>
+                <li><a href="#historia">Historia</a></li>
+                <li><a href="#escudo">Escudo</a></li>
+                <li><a href="#himno">Himno</a></li>
+                <li><a href="#gastronomia">Gastronomía</a></li>
+                <li><a href="#actividades">Actividades</a></li>
+                <li><a href="#flora-fauna">Flora y Fauna</a></li>
+                <li><a href="#sitios">Sitios Emblemáticos</a></li>
+                <li><a href="#mapa">Mapa y Ruta</a></li>
+                <li><a href="#cultura">Cultura</a></li>
+                <li><a href="#clima">Clima</a></li>
+                <li><a href="#productos">Productos</a></li>
+          
+            </ul>
+        </nav>
+    </header>
+
+   <section id="historia">
+    <h2>Historia de Ubaté</h2>
+
+   <p> Bienvenidos a un fascinante recorrido por la historia de Ubaté, un tesoro en el corazón de Colombia que encierra secretos, tradiciones y momentos que han dado forma a su identidad única! Desde sus inicios hasta la actualidad, Ubaté ha sido testigo de cambios significativos y ha dejado una huella imborrable en la historia del país. Prepárate para explorar los rincones de esta ciudad encantadora mientras desentrañamos su pasado y su presente.</p>
+
+<h3>Los Inicios: Orígenes de Ubaté </h3>
+<p>La historia de Ubaté se remonta a tiempos ancestrales, cuando las comunidades indígenas poblaron estas tierras. Con la llegada de los conquistadores españoles en el siglo XVI, se estableció una dinámica de mestizaje cultural que dejaría una marca perdurable en la región.
+
+La Herencia Indígena y el Mestizaje
+Las tradiciones y la cultura indígena aún laten en el corazón de Ubaté. La arquitectura, la gastronomía y las festividades locales son reflejos de esta rica herencia. El mestizaje entre las poblaciones nativas y los colonizadores europeos contribuyó a la diversidad cultural que caracteriza a Ubaté.
+
+Época Colonial y el Camino hacia la Independencia
+Durante la época colonial, Ubaté se convirtió en un importante centro agrícola y ganadero. El comercio de productos locales se convirtió en un motor económico que influyó en el desarrollo de la región. A medida que se gestaba el movimiento independentista en Colombia, Ubaté también alzó su voz en busca de libertad.
+
+Contribuciones a la Independencia
+La lucha por la independencia fue una llama que ardió en los corazones de los ubateños. Figuras como Antonio Nariño, un destacado líder independentista, inspiraron a la población local a alzarse contra el dominio español. La valentía y la determinación de estos héroes locales se mantienen vivas en la memoria de Ubaté.</p>
+
+<h3>El Presente de Ubaté: Un Vistazo a la Actualidad</h3>
+<p>Hoy en día, Ubaté combina su rica historia con la vida moderna. La ciudad ha sabido preservar sus tradiciones y valores mientras se adapta a los cambios y desafíos contemporáneos. Los habitantes de Ubaté continúan honrando sus raíces y celebrando su identidad cultural.</p>
+ </section>
+
+<section id="escudo">
+    <h2>Escudo de Ubaté</h2>
+    <img src="IMG/Escudo.png"/> 
+    <p>El escudo de Ubaté es un símbolo de la identidad y el orgullo del municipio. Este representa su historia, cultura y riqueza natural. Está compuesto por varios elementos que reflejan el patrimonio y los valores de la región.</p>
+
+    <h3>Descripción del Escudo</h3>
+    <p>El escudo de Ubaté se caracteriza por su diseño que integra elementos históricos y naturales importantes:</p>
+    <ul>
+        <li><strong>La parte superior:</strong> Está adornada con un yelmo de caballero medieval, lo que representa la historia y la nobleza de sus habitantes, especialmente durante la época de la colonia y la independencia.</li>
+        <li><strong>Los cuarteles:</strong> El escudo está dividido en cuatro cuarteles:
+            <ul>
+                <li><strong>Cuartel superior izquierdo:</strong> Muestra un paisaje montañoso que simboliza la ubicación geográfica de Ubaté, rodeado de montañas y valles.</li>
+                <li><strong>Cuartel superior derecho:</strong> Presenta una espiga de trigo y una mazorca de maíz, representando la riqueza agrícola de la región.</li>
+                <li><strong>Cuartel inferior izquierdo:</strong> En este cuartel se encuentra una vaca, simbolizando la importancia de la ganadería en Ubaté, conocido como la "Capital Lechera de Colombia".</li>
+                <li><strong>Cuartel inferior derecho:</strong> Contiene un libro y una antorcha, representando la educación y el conocimiento como pilares del desarrollo de la comunidad ubateña.</li>
+            </ul>
+        </li>
+        <li><strong>Cinta inferior:</strong> En la parte inferior del escudo, una cinta con la leyenda "Ubaté" recuerda el nombre del municipio y su importancia histórica en la región.</li>
+    </ul>
+
+    <p>Este escudo es un reflejo de la historia, el trabajo y la naturaleza que definen a Ubaté como un municipio clave en el altiplano cundiboyacense.</p>
+</section>
+
+<section id="himno">
+    <h2>Himno de Ubaté</h2>
+
+    <h3>Letra del Himno de Ubaté</h3>
+    <p><em>Letra: Juan de Dios Peñuela</em><br>
+       <em>Música: Gonzalo Vera Santos</em></p>
+
+    <div class="letra-himno">
+        <p><strong>Coro</strong><br>
+        Ubaté, noble tierra bendita,<br>
+        cuna de historia y tradición,<br>
+        que en tus campos de paz infinita,<br>
+        brilla siempre el trabajo y unión.</p>
+
+        <p><strong>Estrofa 1</strong><br>
+        Desde el tiempo de antaños gloriosos,<br>
+        tus montañas altivas están,<br>
+        vigilando los cielos hermosos,<br>
+        que a tu pueblo cobijan en paz.</p>
+
+        <p><strong>Estrofa 2</strong><br>
+        Eres tierra de leche y ganados,<br>
+        de labriegos de noble corazón,<br>
+        con tu esfuerzo y tus manos honrados,<br>
+        vas forjando un futuro mejor.</p>
+
+        <p><strong>Estrofa 3</strong><br>
+        Tus paisajes y verdes caminos,<br>
+        son reflejo de tu inmenso valor,<br>
+        y tus hijos con fe peregrinos,<br>
+        son el alma de un pueblo luchador.</p>
+    </div>
+
+    <h3>Historia del Himno de Ubaté</h3>
+    <p>El himno de Ubaté fue compuesto por Juan de Dios Peñuela en su letra y por Gonzalo Vera Santos en su música. Es un homenaje a la historia, la cultura y las riquezas naturales de la región. Cada verso está inspirado en los valores que han definido a Ubaté como una tierra de paz, trabajo y unión. Su letra refleja el orgullo de los ubatenses por su tierra fértil, su tradición ganadera, y su papel en la historia de Colombia.</p>
+
+    <p>Este himno se canta en ceremonias oficiales y eventos importantes del municipio, evocando el sentido de pertenencia y el compromiso de su gente con el progreso de Ubaté. Además, su mención a los paisajes y al trabajo de los labriegos subraya la conexión del pueblo con su tierra y la importancia del esfuerzo colectivo para un futuro mejor.</p>
+
+</section>
+
+    <section id="gastronomia">
+        <h2>Gastronomía</h2>
+        <p>¡Bienvenidos a Ubaté, un rincón gastronómico lleno de encanto en Colombia! En este artículo, te invitamos a explorar las delicias culinarias de este lugar que no solo te llenarán el estómago, sino que también te transportarán a la rica historia y tradición de la región.</p>
+
+<h3>¿Por Qué Sumergirse En Los Sabores De Ubaté?</h3>
+<p>Comer en Ubaté es una experiencia que va más allá de satisfacer el hambre. Cada platillo cuenta una historia, desde los ingredientes locales frescos hasta las recetas transmitidas de generación en generación. Los sabores auténticos y la pasión que los lugareños ponen en sus creaciones culinarias te brindan una conexión íntima con la cultura y el corazón de Colombia.</p>
+
+<h3>Historia Culinaria De Ubaté</h3>
+<p>La historia culinaria de Ubaté es un reflejo de la diversidad de la región. Sus platos típicos están influenciados por la herencia indígena, española y mestiza, creando una fusión única de sabores y tradiciones. Los ingredientes frescos y la creatividad culinaria son la base de cada receta, y cada bocado es una forma de preservar y compartir la rica historia de Ubaté.</p>
+
+<h3>Platos Que Conquistan Paladares</h3>
+
+<h3> AJIACO UBATEÑO </h3>
+<p>El ajiaco ubateño es un caldo espeso y reconfortante que combina papas de diferentes variedades, pollo tierno, maíz y guascas, una hierba que le da su sabor característico. Este plato es una celebración de los ingredientes locales y una muestra del ingenio culinario de Ubaté.</p>
+ <img src="IMG/AJI1.jpg"  />
+
+<h3>SOBREBARRIGA AL HORNO</h3>
+<p>La sobrebarriga al horno es un platillo que combina la tradición colombiana con un toque único de Ubaté. La carne se marina en una mezcla de especias y luego se hornea lentamente hasta obtener una textura suave y jugosa. Es una experiencia que te invita a saborear la pasión y el esmero que se ponen en cada paso de su preparación.</p>
+ <img src="IMG/sob2.jpg" />
+
+<h3> CHAGUA</h3>
+La changua es un desayuno reconfortante y tradicional de Ubaté. Esta sopa cremosa se prepara con leche, huevo, cebolla y cilantro, y es perfecta para empezar el día con energía y sabor. Es un ejemplo de cómo los ingredientes simples pueden transformarse en un plato lleno de historia y amor.</p>
+ <img src="IMG/chan3.jpg" />
+
+<h3>AREQUIPE UBATEÑO</h3>
+<p>El arequipe ubateño es un dulce que te endulzará el paladar. Preparado a base de leche y azúcar, este dulce se cocina a fuego lento hasta obtener una textura suave y un color dorado. Es una delicia que representa la dulzura y la calidez de Ubaté.</p>
+ <img src="IMG/are5.png" />
+
+<h3> BUÑUELOS Y ALMOJABANAS</h3>
+<p>Los buñuelos y almojábanas son bocados tradicionales que no pueden faltar en la mesa ubateña. Estos pequeños panecillos de queso se disfrutan tanto en el desayuno como en cualquier momento del día. Son una muestra de la versatilidad de la cocina de Ubaté.</p>
+  <div class="imagenes-duplicadas">
+ <img src="IMG/bun7.jpg"  /> <img  src="IMG/alm6.jpeg"  />
+  </div>
+ </section>
+
+        <p><section id="actividades">
+    <h2>Actividades y Planes Turísticos en Ubaté</h2>
+    <p>Ubaté es un destino encantador que ofrece una amplia gama de actividades turísticas para todos los gustos. Desde disfrutar de la naturaleza hasta explorar la cultura y la historia local, hay algo para cada visitante. A continuación, te presentamos algunas de las mejores actividades y planes turísticos en Ubaté:</p>
+
+    <h3>1. Visita a la Laguna de Fúquene</h3>
+    <p>La Laguna de Fúquene es uno de los atractivos naturales más importantes de la región. Aquí puedes realizar paseos en bote, avistamiento de aves y disfrutar de un entorno tranquilo y natural.</p>
+    <p><strong>Precio:</strong> Entrada libre. Paseos en bote desde $20,000 COP por persona.</p>
+    <img class="imagen-pequeña" src="IMG/fune1.jpg"/>
+
+    <h3>2. Recorrido por Fincas Lecheras</h3>
+    <p>Ubaté es conocida como la "Capital Lechera de Colombia". Una visita a una de sus fincas lecheras te permitirá conocer el proceso de producción de leche y quesos, y degustar productos frescos.</p>
+    <p><strong>Precio:</strong> Visitas guiadas desde $15,000 COP por persona, incluye degustación de quesos.</p>
+    <img class="imagen-pequeña" src="IMG/muu2.jpg"/>
+
+    <h3>3. Caminatas Ecológicas en el Cerro de la Virgen</h3>
+    <p>El Cerro de la Virgen es un lugar ideal para quienes buscan una caminata tranquila mientras disfrutan de vistas panorámicas de Ubaté y sus alrededores. La caminata es apta para todas las edades y niveles de habilidad.</p>
+    <p><strong>Precio:</strong> Entrada libre.</p>
+    <img class="imagen-pequeña" src="IMG/vir3.jpg"/>
+
+    <h3>4. Museo del Queso</h3>
+    <p>Este pequeño museo ubicado en el centro de Ubaté es ideal para conocer la historia de la producción láctea en la región. Aquí podrás aprender sobre las diferentes técnicas de elaboración de quesos y su importancia en la economía local.</p>
+    <p><strong>Precio:</strong> Entrada general: $10,000 COP por persona.</p>
+    <img class="imagen-pequeña" src="IMG/laque4.png"/>
+
+    <h3>5. Rutas en Bicicleta</h3>
+    <p>Ubaté ofrece varias rutas escénicas para los amantes del ciclismo. Puedes recorrer caminos rurales mientras disfrutas del paisaje montañoso y visitar pequeños pueblos a lo largo del recorrido.</p>
+    <p><strong>Precio:</strong> Alquiler de bicicletas desde $30,000 COP por día.</p>
+    <img class="imagen-pequeña" src="IMG/bici6.jpg"/>
+</section>
+</p>
+    </section>
+
+
+
+     <section id="flora-fauna">
+    <h2>Flora y Fauna de Ubaté</h2>
+    <p>Ubaté, ubicado en la región andina de Colombia, ofrece un entorno natural diverso, donde la flora y fauna son reflejo de sus montañas, ríos y lagunas. Aquí te mostramos algunas de las especies más representativas que puedes encontrar en la zona.</p>
+
+    <h3>Flora</h3>
+    <p>La vegetación de Ubaté es variada, especialmente debido a su altitud y clima templado. Los ecosistemas de la región se componen principalmente de especies propias de zonas montañosas y humedales.</p>
+    <ul>
+        <li><strong>Frailejón:</strong> Planta endémica de los páramos colombianos, que ayuda a captar y regular el agua en las montañas.</li>
+        <li><strong>Pino Colombiano:</strong> Árbol que domina muchos de los paisajes montañosos, utilizado en reforestación.</li>
+        <li><strong>Encenillo:</strong> Árbol característico de los bosques andinos, valioso por su madera.</li>
+        <li><strong>Orquídeas:</strong> Ubaté alberga diversas especies de orquídeas, siendo Colombia el país con mayor variedad en el mundo.</li>
+    </ul>
+    <img class="imagen-pequeña" src="IMG/flora.jpg" alt="Flora de Ubaté" />
+
+    <h3>Fauna</h3>
+    <p>La fauna de Ubaté también es rica y diversa, destacándose algunas especies que son vitales para el equilibrio de sus ecosistemas.</p>
+    <ul>
+        <li><strong>Colibríes:</strong> Estas pequeñas y vibrantes aves son comunes en la región, contribuyendo a la polinización de las flores locales.</li>
+        <li><strong>Conejo Silvestre:</strong> Se encuentra en los campos y áreas rurales, adaptado a los paisajes montañosos de Ubaté.</li>
+        <li><strong>Pato Zambullidor:</strong> Ave acuática que habita la Laguna de Fúquene, famoso por sus habilidades de buceo.</li>
+        <li><strong>Venado de Cola Blanca:</strong> Este mamífero es un habitante típico de las montañas andinas, aunque cada vez más raro de observar.</li>
+    </ul>
+    <img class="imagen-pequeña" src="IMG/fauna.jpg" alt="Fauna de Ubaté" />
+</section>
+</p>
+    </section>
+
+    <section id="sitios-emblematicos">
+    <h2>Sitios Emblemáticos de Ubaté</h2>
+    <p>Ubaté, conocido como la "Capital Lechera de Colombia", no solo destaca por su producción de lácteos, sino también por sus hermosos paisajes y su rica historia. A continuación, te presentamos algunos de los sitios más emblemáticos que no puedes dejar de visitar.</p>
+
+    <h3>1. Catedral de Ubaté</h3>
+    <p>La Catedral de San Diego de Alcalá es uno de los principales íconos arquitectónicos y religiosos de Ubaté. Construida en estilo neogótico, su impresionante fachada y vitrales atraen a cientos de turistas y devotos cada año.</p>
+    <img class="imagen-pequeña" src="IMG/ca1.jpeg"/>
+
+    <h3>2. Parque Principal de Ubaté</h3>
+    <p>El Parque Principal de Ubaté es el corazón de la ciudad. Rodeado por edificaciones coloniales, este lugar es perfecto para pasear, disfrutar de la arquitectura y relajarse en un ambiente lleno de historia.</p>
+    <img class="imagen-pequeña" src="IMG/par2.jpeg" />
+
+    <h3>3. Laguna de Fúquene</h3>
+    <p>La Laguna de Fúquene es uno de los sitios naturales más emble"máticos de la región. Es un lugar perfecto para quienes buscan conectarse con la naturaleza, realizar actividades acuáticas o simplemente disfrutar de un entorno paisajístico único.</p>
+    <img class="imagen-pequeña" src="IMG/fune1.jpg"/>
+
+    <h3>4. Museo de la Cultura Lechera</h3>
+    <p>Este museo ofrece un recorrido por la historia y la importancia de la producción láctea en la región. Aquí, los visitantes pueden aprender sobre las técnicas de elaboración de quesos y el papel de Ubaté en la industria lechera nacional.</p>
+    <img class="imagen-pequeña" src="IMG/muu2.jpg"/>
+
+    <h3>5. Cerro de la Virgen</h3>
+    <p>Este cerro es un punto de encuentro para los caminantes y peregrinos que desean disfrutar de una vista panorámica de Ubaté. La imagen de la Virgen María en su cima lo convierte en un lugar de devoción y reflexión para muchos visitantes.</p>
+    <img class="imagen-pequeña" src="IMG/vir3.jpg"/>
+</section>
+
+<section id="mapa-ruta">
+    <h2>Mapa y Ruta desde Bogotá hasta Ubaté</h2>
+    <p>Ubaté se encuentra aproximadamente a 100 km al norte de Bogotá, lo que hace que sea un destino accesible para una escapada de un día o un fin de semana. Aquí te dejamos un mapa interactivo y las indicaciones detalladas para que llegues fácilmente desde Bogotá.</p>
+
+    <h3>Ruta desde Bogotá a Ubaté</h3>
+    <p>Para llegar a Ubaté desde Bogotá, puedes seguir estas indicaciones:</p>
+    <ul>
+        <li>Sal de Bogotá por la Autopista Norte (carretera 55) en dirección a Chía.</li>
+        <li>Pasa por los municipios de Zipaquirá y Cogua.</li>
+        <li>Sigue por la carretera hacia el norte, pasando por Tausa.</li>
+        <li>Finalmente, llegarás a Ubaté después de aproximadamente 2 horas de viaje en coche.</li>
+    </ul>
+    <p>El camino es mayormente pavimentado y ofrece vistas panorámicas de la sabana cundiboyacense, haciendo que el trayecto sea agradable para los viajeros.</p>
+
+    <!-- Mapa interactivo insertado desde Google Maps -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63562.53863259342!2d-73.86948629862201!3d5.31583059743177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e40386e4f343daf%3A0x763be68275a90916!2sVilla%20de%20San%20Diego%20de%20Ubat%C3%A9%2C%20Cundinamarca!5e0!3m2!1ses!2sco!4v1729534627931!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <div id="mapa">
+      
+    <h3>Transporte Público</h3>
+    <p>Si prefieres viajar en transporte público, puedes tomar un bus desde el Terminal de Transportes de Bogotá en dirección a Ubaté. Los buses salen regularmente y el trayecto toma entre 2 y 2.5 horas dependiendo del tráfico. El costo del pasaje ronda los $20,000 COP.</p>
+</section>
+
+<section id="cultura">
+    <h2>Cultura de Ubaté</h2>
+    <p>Ubaté, conocida como la "Capital Lechera de Colombia", es un municipio que ha sabido conservar sus tradiciones y su identidad cultural a lo largo del tiempo. La vida en Ubaté gira en torno a una combinación única de historia, gastronomía, festividades y la profunda conexión con la naturaleza y la vida rural.</p>
+
+    <h3>Festividades</h3>
+    <p>Las fiestas patronales de Ubaté son uno de los eventos más importantes del calendario cultural de la región. Celebradas en honor a San Diego de Alcalá, el patrono del municipio, estas festividades combinan lo religioso con lo festivo. Los habitantes participan en procesiones, misas y diversas actividades recreativas como cabalgatas, corridas de toros y eventos musicales.</p>
+
+    <h3>Religiosidad</h3>
+    <p>La religión juega un papel importante en la vida de los habitantes de Ubaté. La Basílica Menor de San Diego es un símbolo del fervor religioso local y uno de los sitios más visitados de la región. Esta iglesia, construida en el siglo XIX, es un punto de encuentro tanto para actividades religiosas como culturales.</p>
+
+    <h3>Artesanías</h3>
+    <p>La cultura de Ubaté también se refleja en sus artesanías. Las actividades manuales como la cerámica y el tejido son expresiones de la creatividad local. Muchos artesanos de la región elaboran piezas únicas que reflejan tanto la historia como las tradiciones del municipio. Es común encontrar productos hechos a mano en los mercados locales, que capturan el espíritu del lugar.</p>
+
+    <h3>Música y Danzas Tradicionales</h3>
+    <p>La música tradicional de la región tiene influencias de ritmos folclóricos como el bambuco y el pasillo. Durante las festividades, es común ver grupos de danza que representan estos bailes tradicionales. La danza folclórica y las bandas de música campesina forman parte esencial de las celebraciones comunitarias.</p>
+
+    <h3>Gastronomía y Productos Locales</h3>
+    <p>La gastronomía de Ubaté es una parte fundamental de su identidad cultural. Platos como el ajiaco, la changua, los buñuelos, las almojábanas y el famoso queso de Ubaté son emblemas de la región. El proceso de producción de lácteos ha moldeado gran parte de la economía y la cultura del lugar, siendo un aspecto clave de la vida diaria.</p>
+
+    <h3>Costumbres y Tradiciones</h3>
+    <p>Los ubatenses valoran profundamente la vida rural y sus costumbres. El trabajo en el campo, especialmente en la ganadería y la producción lechera, es una tradición que ha pasado de generación en generación. La cultura de la región está intrínsecamente ligada a la tierra, y las costumbres campesinas, como las ferias ganaderas y los mercados locales, son parte esencial de la vida diaria.</p>
+</section>
+
+<section id="clima">
+    <h2>Clima de Ubaté</h2>
+    <p>Ubaté, ubicado en el altiplano cundiboyacense, cuenta con un clima templado de montaña que se caracteriza por temperaturas frescas y moderadas durante todo el año. Debido a su altitud de aproximadamente 2,550 metros sobre el nivel del mar, las temperaturas en Ubaté oscilan generalmente entre los 10°C y 18°C, lo que lo convierte en un lugar agradable para visitar en cualquier época del año.</p>
+
+    <h3>Características Climáticas</h3>
+    <ul>
+        <li><strong>Temperatura promedio anual:</strong> 14°C</li>
+        <li><strong>Época seca:</strong> De diciembre a marzo</li>
+        <li><strong>Época de lluvias:</strong> Abril a mayo y de octubre a noviembre</li>
+        <li><strong>Altitud:</strong> 2,550 metros sobre el nivel del mar</li>
+    </ul>
+
+    <h3>Estaciones y Condiciones del Tiempo</h3>
+    <p>El clima en Ubaté varía levemente durante el año. La época seca, que va desde diciembre hasta marzo, es ideal para actividades al aire libre y turismo, ya que el sol brilla más frecuentemente y las lluvias son mínimas. Durante la temporada de lluvias, en los meses de abril, mayo, octubre y noviembre, las precipitaciones son comunes, aunque no impiden disfrutar de las bellezas naturales de la región.</p>
+
+    <h3>Recomendaciones para los Visitantes</h3>
+    <p>Debido a su clima fresco, es recomendable que los visitantes lleven ropa abrigada durante todo el año, especialmente en las noches, cuando las temperaturas suelen bajar. Si visitas Ubaté durante la temporada de lluvias, no olvides llevar un paraguas o impermeable.</p>
+
+    <h3>Impacto en la Agricultura</h3>
+    <p>El clima templado y las lluvias moderadas hacen de Ubaté un lugar ideal para la agricultura y la ganadería. Las condiciones climáticas favorecen el crecimiento de pastizales y la producción lechera, por lo que la región es famosa por su producción de lácteos, especialmente queso, leche y productos derivados.</p>
+</section>
+
+    
+    <section id="productos">
+    <h2>Productos Provenientes de Ubaté</h2>
+    <p>Ubaté, conocido como la "Capital Lechera de Colombia", se destaca por la calidad y variedad de sus productos, principalmente agrícolas y ganaderos. La economía de Ubaté está fuertemente basada en la producción de lácteos, además de otros productos que reflejan la riqueza de su tierra y tradiciones.</p>
+
+    <h3>1. Productos Lácteos</h3>
+    <p>Los lácteos son el pilar de la economía local, y Ubaté es especialmente famoso por la producción de quesos y otros derivados de la leche. Entre los productos más destacados se incluyen:</p>
+    <ul>
+        <li><strong>Queso Doble Crema:</strong> Un queso fresco y suave, conocido por su textura cremosa y sabor delicado. Es uno de los productos insignia de Ubaté.</li>
+        <li><strong>Leche Fresca:</strong> La calidad de la leche producida en Ubaté es reconocida a nivel nacional, siendo la base para la creación de otros productos derivados.</li>
+        <li><strong>Arequipe:</strong> Un dulce tradicional preparado a base de leche y azúcar, que tiene una textura suave y un sabor característico que enamora a quienes lo prueban.</li>
+        <li><strong>Mantequilla y Yogur:</strong> Otros productos lácteos importantes que se producen en grandes cantidades en la región.</li>
+    </ul>
+
+    <h3>2. Agricultura</h3>
+    <p>Además de los productos lácteos, Ubaté también se destaca por su producción agrícola. El clima templado de montaña permite el cultivo de una variedad de productos, como:</p>
+    <ul>
+        <li><strong>Papa:</strong> Uno de los principales cultivos de la región, con diferentes variedades que se distribuyen a nivel regional y nacional.</li>
+        <li><strong>Maíz:</strong> Este cereal es cultivado en grandes extensiones y es utilizado tanto para consumo local como para la producción de alimentos balanceados.</li>
+        <li><strong>Frutas y Verduras:</strong> Aunque en menor escala, Ubaté también produce frutas como moras, fresas y hortalizas frescas que abastecen mercados locales.</li>
+    </ul>
+
+    <h3>3. Ganadería</h3>
+    <p>La ganadería en Ubaté es una actividad predominante, no solo para la producción de lácteos, sino también para la producción de carne bovina de alta calidad. El ganado es criado en extensos pastizales naturales, lo que garantiza la calidad de la carne y los productos derivados.</p>
+
+    <h3>4. Artesanías</h3>
+    <p>Las actividades artesanales también tienen un lugar importante en la economía de Ubaté. Los artesanos locales producen:</p>
+    <ul>
+        <li><strong>Cerámica:</strong> Piezas de cerámica decorativa y utilitaria que reflejan las tradiciones de la región.</li>
+        <li><strong>Tejidos:</strong> Ropa y accesorios elaborados a mano, utilizando técnicas tradicionales que han pasado de generación en generación.</li>
+    </ul>
+
+    <h3>5. Productos Derivados del Campo</h3>
+    <p>Los productos derivados de la actividad agrícola y ganadera, como los insumos agrícolas (forraje, abono) y otros productos relacionados, también son parte importante de la oferta económica de Ubaté.</p>
+
+    <h3>Impacto Económico</h3>
+    <p>La producción de estos productos no solo abastece al mercado local, sino que muchos de ellos se distribuyen a nivel nacional, siendo Ubaté un referente en la producción láctea de Colombia. La economía de Ubaté se basa en el trabajo agrícola y ganadero, generando empleo y fortaleciendo la identidad local.</p>
+  </section>
+</body>
+</html>

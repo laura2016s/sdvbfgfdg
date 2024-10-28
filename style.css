@@ -1,0 +1,138 @@
+body {
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Cambiado a Comic Sans MS */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #e9f7fa; /* Fondo azul pastel */
+            color: #333;
+        }
+
+       header {
+            position: relative; /* Necesario para posicionar el título */
+            overflow: hidden; /* Para ocultar el desbordamiento */
+            border-bottom: 5px solid #ff8bbd; /* Rosa más oscuro */
+            border-radius: 15px; /* Bordes redondeados en el encabezado */
+        }
+
+        header img {
+            width: 100%; /* Hace que la imagen ocupe todo el ancho */
+            border-radius: 15px; /* Bordes redondeados de la imagen */
+        }
+
+        header h1 {
+            position: absolute; /* Para superponer el título sobre la imagen */
+            top: 30%; /* Ajusta según sea necesario */
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centra el título */
+            z-index: 2; /* Asegura que el título esté encima de la imagen */
+            color: #fff;
+            font-size: 3em; /* Tamaño de fuente más grande */
+            margin: 0;
+            animation: slideIn 1s ease-in-out; /* Animación de entrada */
+        }
+
+nav {
+            background-color: #aeeeee; /* Fondo azul pastel para el menú */
+            position: fixed; /* Fija el menú en la parte superior */
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 3; /* Asegura que el menú esté encima de otros elementos */
+            padding: 10px 0; /* Espaciado del menú */
+        }
+
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ff99cc;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            border-bottom: 2px solid  #ff1493; /* Rosa más oscuro */
+            color:#ff1493; /* Cambio de color en hover */
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px auto;
+            border-radius: 8px;
+            background-color: #ffffff; /* Fondo blanco */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            animation: fadeIn 0.5s ease-in-out; /* Animación de entrada */
+        }
+
+        h2 {
+            color: #66b3ff; /* Azul pastel */
+            border-bottom: 2px solid #99ccff; /* Azul claro */
+            padding-bottom: 5px;
+            font-size: 2em; /* Tamaño de fuente más grande */
+            text-transform: uppercase; /* Texto en mayúsculas */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background: #ffb3e6; /* Rosa pastel */
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+        }
+
+        /* Animaciones */
+       @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                top: 0; /* Comienza desde la parte superior */
+            }
+            to {
+                opacity: 1;
+                top: 30%; /* Termina en la posición deseada */
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+           
+            }
+    
